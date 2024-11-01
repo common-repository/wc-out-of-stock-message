@@ -1,0 +1,44 @@
+{
+  "landingPage": "/wp-admin/admin.php?page=wc-settings&tab=products&section=inventory",
+  "preferredVersions": {
+    "php": "8.1",
+    "wp": "6.5.5"
+  },
+  "steps": [
+    {
+      "step": "login",
+      "username": "admin",
+      "password": "password"
+    },
+    {
+      "step": "installPlugin",
+      "pluginZipFile": {
+        "resource": "wordpress.org\/plugins",
+        "slug": "woocommerce"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginZipFile": {
+        "resource": "wordpress.org\/plugins",
+        "slug": "wc-out-of-stock-message"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+        "step": "installTheme",
+        "themeZipFile": {
+            "resource": "wordpress.org\/themes",
+            "slug": "storefront"
+        }
+    }
+  ],
+  "features": {
+    "networking" : true
+  }
+}
